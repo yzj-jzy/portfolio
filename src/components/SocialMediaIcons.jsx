@@ -1,4 +1,8 @@
 const SocialMediaIcons = () => {
+  const openLink = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="flex justify-center md:justify-start my-10 gap-7">
       <a
@@ -9,27 +13,24 @@ const SocialMediaIcons = () => {
       >
         <img alt="linkedin-link" src="../assets/linkedin.png" />
       </a>
-      <a
+      <button
         className="hover:opacity-50 transition duration-500"
-        target="_blank"
-        rel="noreferrer"
+        onClick={() => openLink("https://twitter.com")}
       >
         <img alt="twitter-link" src="../assets/twitter.png" />
-      </a>
-      <a
+      </button>
+      <button
         className="hover:opacity-50 transition duration-500"
-        target="_blank"
-        rel="noreferrer"
+        onClick={() => openLink("https://facebook.com")}
       >
         <img alt="facebook-link" src="../assets/facebook.png" />
-      </a>
-      <a
+      </button>
+      <button
         className="hover:opacity-50 transition duration-500"
-        target="_blank"
-        rel="noreferrer"
+        onClick={() => openLink("https://instagram.com")}
       >
         <img alt="instagram-link" src="../assets/instagram.png" />
-      </a>
+      </button>
     </div>
   );
 };
