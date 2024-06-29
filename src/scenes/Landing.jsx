@@ -56,9 +56,13 @@ const Landing = ({ setSelectedPage }) => {
             </span>
           </p>
 
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            I am a final year UNIMELB IT student with some extensive experience in software industry !
-          </p>
+          <h2 className="mt-12 mb-7 text-sm text-center md:text-start">
+            @USYD 2023 @UNIMELB2025 <a href="https://appexchange.salesforce.com/appxListingDetail?listingId=a0N300000059H93EAE"> @Payment2us</a>  
+                  <a href="https://getau.com.au/"> @GetAu </a>  <br></br>
+          </h2>
+          
+
+
           <h1>
           Tech Skills
           </h1>
@@ -67,6 +71,7 @@ const Landing = ({ setSelectedPage }) => {
           - Git/Jira/GitHub/Bitbucket <br></br>
           - PostgreSql/MS SQL <br></br>
           - Data Structures/Algorithms <br></br>
+
         </motion.div>
 
 

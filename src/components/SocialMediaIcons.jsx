@@ -13,24 +13,6 @@ const SocialMediaIcons = () => {
       >
         <img alt="linkedin-link" src="../assets/linkedin.png" />
       </a>
-      <button
-        className="hover:opacity-50 transition duration-500"
-        onClick={() => openLink("https://twitter.com")}
-      >
-        <img alt="twitter-link" src="../assets/twitter.png" />
-      </button>
-      <button
-        className="hover:opacity-50 transition duration-500"
-        onClick={() => openLink("https://facebook.com")}
-      >
-        <img alt="facebook-link" src="../assets/facebook.png" />
-      </button>
-      <button
-        className="hover:opacity-50 transition duration-500"
-        onClick={() => openLink("https://instagram.com")}
-      >
-        <img alt="instagram-link" src="../assets/instagram.png" />
-      </button>
     </div>
   );
 };

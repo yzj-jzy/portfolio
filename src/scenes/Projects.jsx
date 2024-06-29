@@ -4,6 +4,7 @@ import expense from '../assets/expense.png';
 import github from '../assets/github.jpg';
 import demo from '../assets/demo.jpg';
 import uow from '../assets/uow.jpg';
+import topsms from '../assets/topsms.png';
 import { motion } from "framer-motion";
 
 const container = {
@@ -22,26 +23,33 @@ const projectVariant = {
 
 const Project = ({ title, description, picture, githubLink, demoLink }) => {
   return (
-    <motion.div variants={projectVariant} className="flex w-full mb-10">
-      <img src={picture} alt={title} className="w-2/3 h-full object-over rounded-l-lg" />
-      <div className="flex flex-col justify-center items-start p-8 w-1/2 bg-gray-800 text-white">
+    <motion.div variants={projectVariant} className="flex flex-col md:flex-row w-full mb-10">
+      <div className="w-full md:w-2/3 overflow-hidden">
+        <img
+          src={picture}
+          alt={title}
+          className="object-cover w-full h-full rounded-lg"
+          style={{ aspectRatio: '16/9',background: "cover", objectFit: "contain" }}
+        />
+      </div>
+      <div className="flex flex-col justify-center items-start p-8 w-full md:w-1/3 bg-gray-800 text-white rounded-b-lg md:rounded-l-none md:rounded-r-lg">
         <p className="text-2xl font-playfair mb-4">{title}</p>
         <p className="text-gray-300 mb-4">{description}</p>
         <div className="flex space-x-4">
-
-          {
-            githubLink && (
-              <a
+          {githubLink && (
+            <a
               className="hover:opacity-50 transition duration-500"
               href={githubLink}
               target="_blank"
               rel="noreferrer"
             >
-              <img alt="github-link" src={github} />
+              <img
+                src={github}
+                alt="github-link"
+                style={{ maxWidth: '30px', maxHeight: '30px' }}
+              />
             </a>
-
-            )
-          }
+          )}
           {demoLink && (
             <a
               className="hover:opacity-50 transition duration-500"
@@ -49,7 +57,11 @@ const Project = ({ title, description, picture, githubLink, demoLink }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <img alt="demo-link" src={demo} />
+              <img
+                src={demo}
+                alt="demo-link"
+                style={{ maxWidth: '30px', maxHeight: '30px' }}
+              />
             </a>
           )}
         </div>
@@ -57,7 +69,6 @@ const Project = ({ title, description, picture, githubLink, demoLink }) => {
     </motion.div>
   );
 };
-
 
 const Projects = () => {
   const ecommerceDescription = "Develop React-based online shopping web that simplifies the user journey from discovery to checkout, and integrate Stripe in the NodeJS backend for secure payment processing.";
@@ -70,6 +81,9 @@ const Projects = () => {
 
   const uowDescription = "Wollongong University LifeHub is a comprehensive web platform designed to enhance the student experience. It offers features such as accommodation listings, dining options, and a marketplace for second-hand goods, providing a one-stop solution for students' everyday needs.";
 
+  const TopSMSDemoLink = "https://master--topsms.netlify.app/";
+  const TopSMSGitLink = "https://github.com/yzj-jzy/TopSMS---Dashboard";
+  const TopSMSDescription = "TopSMS is an SMS marketing platform with a dashboard displaying subscriber metrics, SMS sent, unsubscribers, and clicks. It features campaign management, contacts, reports, and notifications in a user-friendly interface.";
   return (
     <section id="projects" className="pt-48 pb-48">
       {/* HEADINGS */}
@@ -93,7 +107,7 @@ const Projects = () => {
           </div>
         </div>
         <p className="mt-10 mb-10">
-          Here are some of my projects. More project from github coming soon...
+          Here are some of my projects. More project from github coming soon:)
         </p>
       </motion.div>
 
@@ -107,10 +121,10 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* Projects */}
-          <Project title="UOW LifeHub" description={uowDescription} picture={uow}/>
-          <Project title="Nomad" description={ecommerceDescription} picture={ecommerce} githubLink={ecommerceGitLink} demoLink={ecommerceDemoLink}/>
-          <Project title="ExpenseTracker" description={expenseScreenDescription} picture={expense} githubLink={expenseGitLink}/>
-
+          <Project title="Nomad" description={ecommerceDescription} picture={ecommerce} githubLink={ecommerceGitLink} demoLink={ecommerceDemoLink} />
+          <Project title="TopSMS" description={TopSMSDescription} picture={topsms} githubLink={TopSMSGitLink} demoLink={TopSMSDemoLink} />
+          <Project title="UOW LifeHub" description={uowDescription} picture={uow} />
+          <Project title="ExpenseTracker" description={expenseScreenDescription} picture={expense} githubLink={expenseGitLink} />
         </motion.div>
       </div>
     </section>
