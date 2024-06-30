@@ -1,7 +1,4 @@
 const SocialMediaIcons = () => {
-  const openLink = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
 
   return (
     <div className="flex justify-center md:justify-start my-10 gap-7">
