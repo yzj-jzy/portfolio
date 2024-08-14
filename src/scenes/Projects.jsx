@@ -3,7 +3,7 @@ import ecommerce from '../assets/ecommerce.jpg';
 import expense from '../assets/expense.png';
 import github from '../assets/github.jpg';
 import demo from '../assets/demo.jpg';
-import uow from '../assets/uow.jpg';
+import juejin from '../assets/juejin.jpg';
 import topsms from '../assets/topsms.png';
 import { motion } from "framer-motion";
 
@@ -79,7 +79,9 @@ const Projects = () => {
 
   const expenseGitLink = "https://github.com/yzj-jzy/Expense-Tracker";
 
-  const uowDescription = "Wollongong University LifeHub is a comprehensive web platform designed to enhance the student experience. It offers features such as accommodation listings, dining options, and a marketplace for second-hand goods, providing a one-stop solution for students' everyday needs.";
+  const juejinDescription = "Juejin is a very popular tech-sharing website in China, where I often search for information to learn programming. Inspired by this, I created a mini version of Juejin.";
+  const juejinDemoLink = "https://master--endearing-biscuit-a992ab.netlify.app/";
+  const juejinGitLink = "https://github.com/yzj-jzy/juejin/tree/master";
 
   const TopSMSDemoLink = "https://master--topsms.netlify.app/";
   const TopSMSGitLink = "https://github.com/yzj-jzy/TopSMS---Dashboard";
@@ -122,8 +124,8 @@ const Projects = () => {
         >
           {/* Projects */}
           <Project title="Nomad" description={ecommerceDescription} picture={ecommerce} githubLink={ecommerceGitLink} demoLink={ecommerceDemoLink} />
+          <Project title="Jue Jin" description={juejinDescription} githubLink={juejinGitLink} demoLink={juejinDemoLink} picture={juejin} />
           <Project title="TopSMS" description={TopSMSDescription} picture={topsms} githubLink={TopSMSGitLink} demoLink={TopSMSDemoLink} />
-          <Project title="UOW LifeHub" description={uowDescription} picture={uow} />
           <Project title="ExpenseTracker" description={expenseScreenDescription} picture={expense} githubLink={expenseGitLink} />
         </motion.div>
       </div>
